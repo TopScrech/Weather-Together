@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33127E4293F5A2000015D25 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127E3293F5A2000015D25 /* MainView.swift */; };
+		F33127E6293F614E00015D25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127E5293F614E00015D25 /* Extensions.swift */; };
+		F33127E9293F69A200015D25 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F33127E8293F69A200015D25 /* BottomSheet */; };
+		F33127EB293F6BBA00015D25 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127EA293F6BBA00015D25 /* Model.swift */; };
+		F33127EE293F6E6F00015D25 /* ForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127ED293F6E6F00015D25 /* ForcastView.swift */; };
+		F33127F0293F743300015D25 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127EF293F743300015D25 /* TabBar.swift */; };
 		F33FEF86293CDB8F00312502 /* Weather_TogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33FEF85293CDB8F00312502 /* Weather_TogetherApp.swift */; };
-		F33FEF88293CDB8F00312502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33FEF87293CDB8F00312502 /* ContentView.swift */; };
+		F33FEF88293CDB8F00312502 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33FEF87293CDB8F00312502 /* WeatherView.swift */; };
 		F33FEF8A293CDB8F00312502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33FEF89293CDB8F00312502 /* Assets.xcassets */; };
 		F33FEF8D293CDB8F00312502 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33FEF8C293CDB8F00312502 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F33127E3293F5A2000015D25 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F33127E5293F614E00015D25 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F33127EA293F6BBA00015D25 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F33127ED293F6E6F00015D25 /* ForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastView.swift; sourceTree = "<group>"; };
+		F33127EF293F743300015D25 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F33FEF82293CDB8F00312502 /* Weather Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33FEF85293CDB8F00312502 /* Weather_TogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_TogetherApp.swift; sourceTree = "<group>"; };
-		F33FEF87293CDB8F00312502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F33FEF87293CDB8F00312502 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		F33FEF89293CDB8F00312502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F33FEF8C293CDB8F00312502 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,12 +37,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33127E9293F69A200015D25 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F33127EC293F6BC000015D25 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F33127E3293F5A2000015D25 /* MainView.swift */,
+				F33127EF293F743300015D25 /* TabBar.swift */,
+				F33FEF87293CDB8F00312502 /* WeatherView.swift */,
+				F33127ED293F6E6F00015D25 /* ForcastView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		F33FEF79293CDB8F00312502 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				F33FEF85293CDB8F00312502 /* Weather_TogetherApp.swift */,
-				F33FEF87293CDB8F00312502 /* ContentView.swift */,
+				F33127EC293F6BC000015D25 /* Weather */,
+				F33127EA293F6BBA00015D25 /* Model.swift */,
+				F33127E5293F614E00015D25 /* Extensions.swift */,
 				F33FEF89293CDB8F00312502 /* Assets.xcassets */,
 				F33FEF8B293CDB8F00312502 /* Preview Content */,
 			);
@@ -83,6 +108,9 @@
 			dependencies = (
 			);
 			name = "Weather Together";
+			packageProductDependencies = (
+				F33127E8293F69A200015D25 /* BottomSheet */,
+			);
 			productName = "Weather Together";
 			productReference = F33FEF82293CDB8F00312502 /* Weather Together.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = F33FEF79293CDB8F00312502;
+			packageReferences = (
+				F33127E7293F69A200015D25 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = F33FEF83293CDB8F00312502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F33FEF88293CDB8F00312502 /* ContentView.swift in Sources */,
+				F33127EB293F6BBA00015D25 /* Model.swift in Sources */,
+				F33FEF88293CDB8F00312502 /* WeatherView.swift in Sources */,
+				F33127E4293F5A2000015D25 /* MainView.swift in Sources */,
 				F33FEF86293CDB8F00312502 /* Weather_TogetherApp.swift in Sources */,
+				F33127E6293F614E00015D25 /* Extensions.swift in Sources */,
+				F33127EE293F6E6F00015D25 /* ForcastView.swift in Sources */,
+				F33127F0293F743300015D25 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,16 +306,19 @@
 				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Weather Together";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Weather-Together";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -299,16 +338,19 @@
 				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Weather Together";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Weather-Together";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -339,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F33127E7293F69A200015D25 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wouter125/BottomSheet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F33127E8293F69A200015D25 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F33127E7293F69A200015D25 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F33FEF7A293CDB8F00312502 /* Project object */;
 }
