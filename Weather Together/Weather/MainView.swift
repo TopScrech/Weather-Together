@@ -18,47 +18,36 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
+                let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
                 
                 ZStack {
                     
                     WeatherView()
-                        .offset(y: -bottomSheetTranslationProrated * 46)
-                    
-//                    TabView {
-//                        WeatherView()
-//                            .tabItem {
-//                                Image(systemName: "house")
-//                            }
-//                            .toolbar(.visible, for: .tabBar)
-//                            .toolbarBackground(.gray, for: .tabBar)
-//
-//                        WeatherView()
-//                            .tabItem {
-//                                Image(systemName: "magnifyingglass")
-//                            }
-//
-//                        WeatherView()
-//                            .tabItem {
-//                                Image(systemName: "flame")
-//                            }
-//
-//                        WeatherView()
-//                            .tabItem {
-//                                Image(systemName: "gearshape")
-//                            }
-//                    }
+                        .offset(y: -bottomSheetTranslationProrated * 220)
                     
                     BottomSheetView(position: $bottomSheetPosition) {
 //                        Text(position.rawValue.formatted())
                     } content: {
                         ForcastView()
-                            .frame(maxWidth: .infinity)
+                            .ignoresSafeArea(.all)
+                    }
+                    .onBottomSheetDrag { translation in
+                        bottomSheetTranslation = translation / screenHeight
+                        
+                        withAnimation(.easeInOut) {
+                            if bottomSheetPosition == BottomSheetRelativePosition.top {
+                                hasDragged = true
+                            } else {
+                                hasDragged = false
+                            }
+                        }
                     }
                     
                     TabBar()
+                        .offset(y: bottomSheetTranslationProrated * 100)
                 }
             }
-        }
+        }.preferredColorScheme(.light)
     }
 }
 

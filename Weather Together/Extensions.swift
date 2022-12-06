@@ -10,6 +10,4 @@ extension Color {
             opacity: alpha
         )
     }
-    
-    static let bottomSheetBorderTop = LinearGradient(gradient: Gradient(colors: [.white.opacity(0), .white.opacity(0.5), .white.opacity(0)]), startPoint: .leading, endPoint: .trailing)
 }
