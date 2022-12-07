@@ -9,14 +9,15 @@ struct ForcastView: View {
             
             VStack(spacing: 0) {
                 
-                Spacer().frame(height: 52)
+                Spacer().frame(height: 32)
                 
                 Picker("Forcast", selection: $selected) {
                     ForEach(selection, id: \.self) { time in
                         Text(time)
-                        
                     }
                 }.pickerStyle(.segmented)
+//                    .foregroundColor(Color(0x0A1F3F))
+//                    .colorMultiply(.white)
                 
                 Spacer().frame(height: 16)
                 

@@ -17,43 +17,42 @@ struct WeatherView: View {
                 
                 // MARK: - Date and Profile Pic
                 HStack {
-                    Text("Sun. Dec 4th, 2022").font(.system(size: 16))
-                        .foregroundColor(Color(#colorLiteral(red: 0.43, green: 0.43, blue: 0.43, alpha: 1)))
+                    Text("Sun. Dec 4th, 2022")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(Color(0x6F6F6F))
                         .multilineTextAlignment(.center)
                         .textCase(.uppercase)
                     
                     Spacer()
                     
-                    Image(uiImage: #imageLiteral(resourceName: "Profile Pic"))
+                    Image("Profile Pic")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
-                        .frame(width: 40, height: 40)
-                    
                 }
                 
                 Spacer().frame(height: 40)
                 
                 // MARK: - Weather
-                HStack(spacing: 10) {
+                HStack(spacing: 8) {
                     Image("Sun Cloud")
                         .resizable()
-                        .frame(width: 107, height: 107)
+                        .frame(width: 110, height: 107)
                     
                     VStack {
                         Text("20°C")
                             .font(.system(size: 54, weight: .bold, design: .rounded))
-                            .foregroundColor(Color(#colorLiteral(red: 0.04, green: 0.12, blue: 0.25, alpha: 1)))
+                            .foregroundColor(Color(0x0A1F3F))
                         
                         Text("Magnolia, TX")
                             .font(.system(size: 16, weight: .bold))
-                            .foregroundColor(Color(#colorLiteral(red: 0.04, green: 0.12, blue: 0.25, alpha: 1)))
+                            .foregroundColor(Color(0x0A1F3F))
                             .textCase(.uppercase)
 
                         Text("Partly CloudY")
-                            .font(.system(size: 14))
-                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0.26, blue: 0.95, alpha: 1)))
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(Color(0x0043F1))
                             .textCase(.uppercase)
                     }
                 }
@@ -61,7 +60,7 @@ struct WeatherView: View {
                 Spacer().frame(height: 32)
 
                 
-            }.padding(.horizontal, 25)
+            }.padding(.horizontal, 24)
             
             // MARK: - Wind Temp Humidity
             HStack(spacing: 11) {
@@ -75,10 +74,11 @@ struct WeatherView: View {
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundColor(Color(0x6F6F6F))
                         
-                    }.padding(.horizontal, 24)
-                        .padding(.vertical, 8)
-                        .background(Color(0xE2E9FC))
-                        .cornerRadius(8)
+                    }
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 8)
+                    .background(Color(0xE2E9FC))
+                    .cornerRadius(8)
                 }
             }
 

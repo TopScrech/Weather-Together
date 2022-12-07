@@ -33,7 +33,7 @@ struct MainView: View {
                     }
                     .onBottomSheetDrag { translation in
                         bottomSheetTranslation = translation / screenHeight
-                        
+
                         withAnimation(.easeInOut) {
                             if bottomSheetPosition == BottomSheetRelativePosition.top {
                                 hasDragged = true
