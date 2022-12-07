@@ -11,25 +11,14 @@ struct WeatherView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading) {
 
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 56)
                 
-                // MARK: - Date and Profile Pic
                 HStack {
-                    Text("Sun. Dec 4th, 2022")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundColor(Color(0x6F6F6F))
-                        .multilineTextAlignment(.center)
-                        .textCase(.uppercase)
-                    
+                    Date()
                     Spacer()
-                    
-                    Image("Profile Pic")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
+                    ProfilePic()
                 }
                 
                 Spacer().frame(height: 40)
@@ -40,7 +29,7 @@ struct WeatherView: View {
                         .resizable()
                         .frame(width: 110, height: 107)
                     
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text("20°C")
                             .font(.system(size: 54, weight: .bold, design: .rounded))
                             .foregroundColor(Color(0x0A1F3F))
@@ -57,8 +46,7 @@ struct WeatherView: View {
                     }
                 }
                 
-                Spacer().frame(height: 32)
-
+                Spacer().frame(height: 40)
                 
             }.padding(.horizontal, 24)
             
@@ -86,7 +74,6 @@ struct WeatherView: View {
         }
     }
 }
-
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {

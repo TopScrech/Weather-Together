@@ -24,7 +24,7 @@ struct MainView: View {
                     
                     WeatherView()
                         .offset(y: -bottomSheetTranslationProrated * 220)
-                    
+
                     BottomSheetView(position: $bottomSheetPosition) {
 //                        Text(position.rawValue.formatted())
                     } content: {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F304C0542940906F006B13CB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304C0532940906F006B13CB /* Date.swift */; };
+		F304C0562940909D006B13CB /* ProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F304C0552940909D006B13CB /* ProfilePic.swift */; };
 		F33127E4293F5A2000015D25 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127E3293F5A2000015D25 /* MainView.swift */; };
 		F33127E6293F614E00015D25 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33127E5293F614E00015D25 /* Extensions.swift */; };
 		F33127E9293F69A200015D25 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F33127E8293F69A200015D25 /* BottomSheet */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F304C0532940906F006B13CB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F304C0552940909D006B13CB /* ProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePic.swift; sourceTree = "<group>"; };
 		F33127E3293F5A2000015D25 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F33127E5293F614E00015D25 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F33127EA293F6BBA00015D25 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -44,12 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F304C057294090A7006B13CB /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F304C0532940906F006B13CB /* Date.swift */,
+				F304C0552940909D006B13CB /* ProfilePic.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 		F33127EC293F6BC000015D25 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				F33127E3293F5A2000015D25 /* MainView.swift */,
-				F33127EF293F743300015D25 /* TabBar.swift */,
 				F33FEF87293CDB8F00312502 /* WeatherView.swift */,
+				F304C057294090A7006B13CB /* Elements */,
+				F33127EF293F743300015D25 /* TabBar.swift */,
 				F33127ED293F6E6F00015D25 /* ForcastView.swift */,
 			);
 			path = Weather;
@@ -171,7 +185,9 @@
 				F33127EB293F6BBA00015D25 /* Model.swift in Sources */,
 				F33FEF88293CDB8F00312502 /* WeatherView.swift in Sources */,
 				F33127E4293F5A2000015D25 /* MainView.swift in Sources */,
+				F304C0542940906F006B13CB /* Date.swift in Sources */,
 				F33FEF86293CDB8F00312502 /* Weather_TogetherApp.swift in Sources */,
+				F304C0562940909D006B13CB /* ProfilePic.swift in Sources */,
 				F33127E6293F614E00015D25 /* Extensions.swift in Sources */,
 				F33127EE293F6E6F00015D25 /* ForcastView.swift in Sources */,
 				F33127F0293F743300015D25 /* TabBar.swift in Sources */,
