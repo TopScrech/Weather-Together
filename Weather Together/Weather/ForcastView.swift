@@ -7,7 +7,7 @@ struct ForcastView: View {
     var body: some View {
         ScrollView {
             
-            VStack(spacing: 0) {
+            VStack {
                 
                 Spacer().frame(height: 32)
                 
@@ -19,30 +19,43 @@ struct ForcastView: View {
 //                    .foregroundColor(Color(0x0A1F3F))
 //                    .colorMultiply(.white)
                 
-                Spacer().frame(height: 16)
+                Spacer().frame(height: 18)
                 
                 Text("PARTLY CLOUDY CONDITIONS EXPECTED AROUND 4PM")
                     .font(.system(size: 12))
                     .foregroundColor(Color(0x0A1F3F))
                     .textCase(.lowercase)
+                    .frame(height: 24)
                 
-                Spacer().frame(height: 16)
+                Spacer().frame(height: 18)
                 
                 ScrollView(.horizontal) {
-                    VStack {
-                        Spacer().frame(height: 16)
+                    VStack(spacing: 8) {
+                        Spacer().frame(height: 8)
+                        
+                        Text("Clouds")
+                            .font(.system(size: 12, weight: .bold, design: .rounded))
+                            .foregroundColor(Color(0x0A1F3F))
+                        
+//                        Spacer().frame(height: 8)
                         
                         Image("Sun Cloud")
                             .resizable()
                             .frame(width: 72, height: 72)
                         
-                        Spacer().frame(height: 8)
+//                        Spacer().frame(height: 8)
+
+                        Text("South")
+                            .font(.system(size: 12, weight: .bold, design: .rounded))
+                            .foregroundColor(Color(0x0A1F3F))
+                        
+//                        Spacer().frame(height: 8)
                         
                         Text("20°C")
                             .font(.system(size: 24, weight: .heavy, design: .rounded))
                             .foregroundColor(Color(0x0A1F3F))
                         
-                        Spacer().frame(height: 8)
+//                        Spacer().frame(height: 8)
                         
                         Text("12:00")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
@@ -51,15 +64,17 @@ struct ForcastView: View {
                             .foregroundColor(.white)
                             .background(Color(0x1E5DFF))
                             .cornerRadius(4)
-                            .padding(.horizontal, 14.5)
+                           
+                        Spacer().frame(height: 8)
                         
-                        Spacer().frame(height: 16)
-                    }.background(.white)
+                    }.frame(height: 224)
+                    .padding(.horizontal, 14.5)
+                    .background(.white)
                         .cornerRadius(8)
                 }
 
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 28)
         }
         .background(Color(0xE2E9FC))
         .clipShape(RoundedRectangle(cornerRadius: 44))

@@ -13,15 +13,15 @@ struct WeatherView: View {
         NavigationStack {
             VStack(alignment: .leading) {
 
-                Spacer().frame(height: 56)
+                Spacer().frame(height: 20)
                 
                 HStack {
                     Date()
                     Spacer()
                     ProfilePic()
-                }
+                }.frame(height: 24)
                 
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 36)
                 
                 // MARK: - Weather
                 HStack(spacing: 8) {
@@ -33,25 +33,32 @@ struct WeatherView: View {
                         Text("20°C")
                             .font(.system(size: 54, weight: .bold, design: .rounded))
                             .foregroundColor(Color(0x0A1F3F))
+                            .frame(height: 64)
+                        
+                        Spacer().frame(height: 2)
                         
                         Text("Magnolia, TX")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(Color(0x0A1F3F))
                             .textCase(.uppercase)
+//                            .frame(height: 24)
 
+                        Spacer().frame(height: 2)
+                        
                         Text("Partly CloudY")
                             .font(.system(size: 14, weight: .bold))
                             .foregroundColor(Color(0x0043F1))
                             .textCase(.uppercase)
+//                            .frame(height: 17)
                     }
                 }
                 
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 36)
                 
-            }.padding(.horizontal, 24)
+            }.padding(.horizontal, 28)
             
             // MARK: - Wind Temp Humidity
-            HStack(spacing: 11) {
+            HStack(spacing: 17) {
                 ForEach(windTempHum) { element in
                     VStack {
                         Text(element.name)
@@ -69,6 +76,7 @@ struct WeatherView: View {
                     .cornerRadius(8)
                 }
             }
+//            .padding(.horizontal, 28)
 
             Spacer()
         }
